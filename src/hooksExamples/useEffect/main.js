@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 
-function Hook_useEffect() {
+function HookUseEffect() {
     const [type, setType] = useState("users");
     const [data, setData] = useState([]);
     const [pos, setPos] = useState({ x: 0, y: 0 });
 
     console.log("component render");
     useEffect(() => {
-        fetch(`https://jsonplaceholder.typicode.com/${type}`)
+        fetch(`https://jsonplaceholder.typicode.com/${type}/1`)
             .then((response) => response.json())
             .then((json) => setData(json));
         console.log("render useEffect");
@@ -49,6 +49,8 @@ function Hook_useEffect() {
     return (
         <>
             <h6>useEffect</h6>
+            <hr />
+
             <pre>{JSON.stringify(pos, null, 2)}</pre>
             <h1>Ресурс: {type}</h1>
             <button className="btn btn-info el" onClick={() => setType("users")}>
@@ -68,4 +70,4 @@ function Hook_useEffect() {
     );
 }
 
-export default Hook_useEffect;
+export default HookUseEffect;

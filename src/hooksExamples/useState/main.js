@@ -5,7 +5,7 @@ function computeInitialState() {
     return Math.trunc(Math.random() * 20);
 }
 
-function Hook_useState() {
+function HookUseState() {
     const [count, setCount] = useState(() => computeInitialState());
 
     function increment() {
@@ -23,6 +23,8 @@ function Hook_useState() {
     return (
         <>
             <h6>useState</h6>
+            <hr />
+
             <button onClick={increment} className="btn btn-success el">
                 Increment
             </button>
@@ -39,4 +41,4 @@ function Hook_useState() {
     );
 }
 
-export default Hook_useState;
+export default HookUseState;

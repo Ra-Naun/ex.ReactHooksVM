@@ -1,16 +1,28 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import React from "react";
-import Hook_useState from "./hooksExamples/useState/main.js";
-import Hook_useEffect from "./hooksExamples/useEffect/main.js";
+import HookUseState from "./hooksExamples/useState/main.js";
+import HookUseEffect from "./hooksExamples/useEffect/main.js";
+import HookUseRef from "./hooksExamples/useRef/main.js";
+import HookUseMemo from "./hooksExamples/useMemo/main.js";
+import HookUseCallback from "./hooksExamples/useCallback/main.js";
 
 function App() {
     return (
         <div className="App container">
             <div className="box">
-                <Hook_useState />
+                <HookUseState />
             </div>
             <div className="box">
-                <Hook_useEffect />
+                <HookUseEffect />
+            </div>
+            <div className="box">
+                <HookUseRef />
+            </div>
+            <div className="box">
+                <HookUseMemo />
+            </div>
+            <div className="box">
+                <HookUseCallback />
             </div>
         </div>
     );
