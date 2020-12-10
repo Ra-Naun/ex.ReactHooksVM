@@ -5,6 +5,9 @@ import HookUseEffect from "./hooksExamples/useEffect/main.js";
 import HookUseRef from "./hooksExamples/useRef/main.js";
 import HookUseMemo from "./hooksExamples/useMemo/main.js";
 import HookUseCallback from "./hooksExamples/useCallback/main.js";
+import HookUseContext from "./hooksExamples/useContext/main.js";
+import HookUseReducer from "./hooksExamples/useReducer/main.js";
+import CostumHook from "./hooksExamples/customHook/main.js";
 
 function App() {
     return (
@@ -23,6 +26,15 @@ function App() {
             </div>
             <div className="box">
                 <HookUseCallback />
+            </div>
+            <div className="box">
+                <HookUseContext />
+            </div>
+            <div className="box">
+                <HookUseReducer />
+            </div>
+            <div className="box">
+                <CostumHook />
             </div>
         </div>
     );
