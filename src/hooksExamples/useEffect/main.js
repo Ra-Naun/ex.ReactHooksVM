@@ -7,7 +7,7 @@ function HookUseEffect() {
 
     console.log("component render");
     useEffect(() => {
-        fetch(`https://jsonplaceholder.typicode.com/${type}/1`)
+        fetch(`https://jsonplaceholder.typicode.com/${type}?_limit=3`)
             .then((response) => response.json())
             .then((json) => setData(json));
         console.log("render useEffect");
